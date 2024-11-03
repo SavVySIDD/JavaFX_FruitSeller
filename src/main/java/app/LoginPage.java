@@ -34,11 +34,18 @@ public class LoginPage extends GridPane {
             String password = passwordField.getText();
 
             if (userManager.login(username, password)) {
-                System.out.println("Login successful! Navigating to Dashboard...");
-                primaryStage.setScene(new Scene(new Dashboard(primaryStage, userManager, username), 800, 600));
+                System.out.println("Login successful! Navigating to HomePage...");
+
+                // Create a CartPage specific to the user
+                CartPage cartPage = new CartPage(primaryStage, username);
+
+                // Navigate directly to HomePage, passing CartPage and username
+                primaryStage.setScene(new Scene(new HomePage(primaryStage, cartPage, username), 800, 600));
             } else {
                 System.out.println("Login failed. Invalid username or password.");
                 errorLabel.setText("Invalid username or password.");
+
+                // Add the error label to the layout if not already added
                 if (!getChildren().contains(errorLabel)) {
                     add(errorLabel, 1, 4);
                 }
