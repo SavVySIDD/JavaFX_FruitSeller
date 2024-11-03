@@ -22,13 +22,21 @@ public class CartPage extends VBox {
         items = loadCartItems(); // Load items specific to user
         cartLabel = new Label("Cart Items:");
         Button backButton = new Button("Back to Home");
+        // Button checkoutButton = new Button("Proceed to Checkout");
 
         backButton.setOnAction(e -> {
             // Pass the existing CartPage back to HomePage
             primaryStage.setScene(new Scene(new HomePage(primaryStage, this, currentUsername), 800, 600));
         });
 
-        getChildren().addAll(cartLabel, backButton);
+        Button checkoutButton = new Button("Proceed to Checkout");
+        checkoutButton.setOnAction(e -> {
+        // Navigate to the CheckoutPage, passing the cart items list and username
+        primaryStage.setScene(new Scene(new CheckoutPage(primaryStage, items, currentUsername), 400, 300));
+    });
+
+
+        getChildren().addAll(cartLabel, backButton, checkoutButton);
         setPadding(new Insets(10));
         updateCartDisplay();
     }

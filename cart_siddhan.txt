@@ -1,24 +1,8 @@
-Item 1
-Item 1
-Item 2
-Item 7
-Item 2
-Item 2
-Item 3
-Item 3
-Item 4
-Item 4
-Item 5
-Item 5
-Item 2
-Item 2
-Item 3
-Item 8
-Item 1
-Item 2
-Item 7
-Item 2
-Item 7
-Item 1
-Item 2
-Item 3
+Apple - Rs 5
+Kiwi - Rs 12
+Kiwi - Rs 12
+Musk Melon - Rs 7
+Apple - Rs 5
+Watermelon - Rs 21
+Banana - Rs 20
+Kiwi - Rs 12
